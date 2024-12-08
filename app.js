@@ -22,7 +22,7 @@ function copier(value) {
 
     let freeObj = {};
     for (const key in value) 
-        freeObj[key] = value[key];
+        freeObj[key] = copier(value[key]);
     
 
     return freeObj;
